@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-GN-a9P">
-                                <rect key="frame" x="50" y="74" width="314" height="40"/>
+                                <rect key="frame" x="41.5" y="74" width="331" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ugA-0d-FIA"/>
@@ -31,17 +31,36 @@
                                     <action selector="goToBasicAutoLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PE6-yA-DNz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wp-ep-9dU">
+                                <rect key="frame" x="41.5" y="144" width="331" height="40"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GNY-Yl-uqh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UI Components">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToUIComponent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I82-nU-3Ow"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bVi-GN-a9P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="7HA-Te-cYY"/>
                             <constraint firstItem="bVi-GN-a9P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BtG-mG-fxn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bVi-GN-a9P" secondAttribute="trailing" constant="50" id="Cbv-B4-OvY"/>
-                            <constraint firstItem="bVi-GN-a9P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="eTa-6O-35Y"/>
+                            <constraint firstItem="bVi-GN-a9P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CTZ-DE-Wo2"/>
+                            <constraint firstItem="8Wp-ep-9dU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JlM-CR-Pgm"/>
+                            <constraint firstItem="8Wp-ep-9dU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="QBJ-Ic-0qe"/>
+                            <constraint firstItem="8Wp-ep-9dU" firstAttribute="top" secondItem="bVi-GN-a9P" secondAttribute="bottom" constant="30" id="ayP-g9-63p"/>
                         </constraints>
                     </view>
                     <connections>
                         <segue destination="yk2-66-taz" kind="presentation" identifier="goToBasicAutoLayout" modalPresentationStyle="fullScreen" id="CdT-Ef-jlg"/>
+                        <segue destination="gNg-X8-JaY" kind="presentation" identifier="goToUIComponent" modalPresentationStyle="fullScreen" id="rRj-nX-9as"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,7 +73,15 @@
                 <viewControllerPlaceholder storyboardName="BasicAutoLayout" id="yk2-66-taz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBZ-Mx-pUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691" y="100"/>
+            <point key="canvasLocation" x="688" y="-137"/>
+        </scene>
+        <!--UIComponents-->
+        <scene sceneID="sHd-4E-UWD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UIComponents" id="gNg-X8-JaY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwz-Ho-Vh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="-103"/>
         </scene>
     </scenes>
     <resources>
