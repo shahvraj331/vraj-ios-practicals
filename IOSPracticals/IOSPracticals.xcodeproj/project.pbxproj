@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A0308F9327CC8A7B0091AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A139D27C659B50027C00C /* LoginViewController.swift */; };
+		A03D1AF927D0DABB00267051 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D1AF827D0DABB00267051 /* MapViewController.swift */; };
 		A069F5A327C8FD7200CFD11D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A069F5A227C8FD7200CFD11D /* Validation.swift */; };
 		A06B66C927C8A968000CE5C7 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B66C827C8A968000CE5C7 /* SuccessViewController.swift */; };
 		A09A136627C636130027C00C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A136527C636130027C00C /* AppDelegate.swift */; };
@@ -21,7 +22,17 @@
 		A09A138927C636140027C00C /* IOSPracticalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A138827C636140027C00C /* IOSPracticalsUITestsLaunchTests.swift */; };
 		A09A139C27C637330027C00C /* BasicAutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09A139B27C637330027C00C /* BasicAutoLayout.storyboard */; };
 		A09AAD2727CCA47400E462FB /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09AAD2627CCA47400E462FB /* Enumerations.swift */; };
+		A09AAD2927CCC44300E462FB /* UIComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09AAD2827CCC44300E462FB /* UIComponents.storyboard */; };
+		A09AAD2D27CCC4F900E462FB /* UISignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09AAD2C27CCC4F900E462FB /* UISignUpViewController.swift */; };
+		A09C4FF427CF972600E28414 /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C4FF327CF972600E28414 /* SegmentViewController.swift */; };
+		A0A71C0827D220AC00014BFE /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A71C0727D220AC00014BFE /* SwitchTableViewCell.swift */; };
+		A0A71C0A27D220BD00014BFE /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A71C0927D220BD00014BFE /* CollectionTableViewCell.swift */; };
 		A0B5285227C8E5A60019E417 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A139927C6371B0027C00C /* SignUpViewController.swift */; };
+		A0D4BE4527CDF87600732FE6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4BE4427CDF87600732FE6 /* PageViewController.swift */; };
+		A0D4BE4727CDFBF700732FE6 /* UILoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4BE4627CDFBF700732FE6 /* UILoginViewController.swift */; };
+		A0E5CB4F27D5CFAF00DE6059 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CB4E27D5CFAF00DE6059 /* WebViewController.swift */; };
+		A0E5CB5127D6222900DE6059 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A0E5CB5027D6222900DE6059 /* sample.pdf */; };
+		A0FB6C9627D7439500B98DA7 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB6C9527D7439500B98DA7 /* MyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A03D1AF827D0DABB00267051 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A069F5A227C8FD7200CFD11D /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		A06B66C827C8A968000CE5C7 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessViewController.swift; path = IOSPracticals/viewControllers/SuccessViewController.swift; sourceTree = SOURCE_ROOT; };
+		A06B66C827C8A968000CE5C7 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessViewController.swift; path = IOSPracticals/ViewControllers/BasicAutoLayout/SuccessViewController.swift; sourceTree = SOURCE_ROOT; };
 		A09A136227C636130027C00C /* IOSPracticals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSPracticals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09A136527C636130027C00C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09A136727C636130027C00C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,16 @@
 		A09A139B27C637330027C00C /* BasicAutoLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicAutoLayout.storyboard; sourceTree = "<group>"; };
 		A09A139D27C659B50027C00C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A09AAD2627CCA47400E462FB /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		A09AAD2827CCC44300E462FB /* UIComponents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIComponents.storyboard; sourceTree = "<group>"; };
+		A09AAD2C27CCC4F900E462FB /* UISignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISignUpViewController.swift; sourceTree = "<group>"; };
+		A09C4FF327CF972600E28414 /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
+		A0A71C0727D220AC00014BFE /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		A0A71C0927D220BD00014BFE /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		A0D4BE4427CDF87600732FE6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		A0D4BE4627CDFBF700732FE6 /* UILoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILoginViewController.swift; sourceTree = "<group>"; };
+		A0E5CB4E27D5CFAF00DE6059 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A0E5CB5027D6222900DE6059 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = sample.pdf; path = ../../../../Downloads/sample.pdf; sourceTree = "<group>"; };
+		A0FB6C9527D7439500B98DA7 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				A069F5A227C8FD7200CFD11D /* Validation.swift */,
+				A0FB6C9527D7439500B98DA7 /* MyViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -119,17 +142,18 @@
 		A09A136427C636130027C00C /* IOSPracticals */ = {
 			isa = PBXGroup;
 			children = (
+				A09AAD2527CCA45100E462FB /* Enums */,
 				A069F5A127C8FD4A00CFD11D /* Common */,
 				A09A139827C636C90027C00C /* ViewControllers */,
 				A09A139727C636AC0027C00C /* Storyboards */,
 				A09A136527C636130027C00C /* AppDelegate.swift */,
 				A09A136727C636130027C00C /* SceneDelegate.swift */,
-				A09AAD2627CCA47400E462FB /* Enumerations.swift */,
 				A09A136927C636130027C00C /* ViewController.swift */,
 				A09A136B27C636130027C00C /* Main.storyboard */,
 				A09A136E27C636140027C00C /* Assets.xcassets */,
 				A09A137027C636140027C00C /* LaunchScreen.storyboard */,
 				A09A137327C636140027C00C /* Info.plist */,
+				A0E5CB5027D6222900DE6059 /* sample.pdf */,
 			);
 			path = IOSPracticals;
 			sourceTree = "<group>";
@@ -155,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				A09A139B27C637330027C00C /* BasicAutoLayout.storyboard */,
+				A09AAD2827CCC44300E462FB /* UIComponents.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -162,11 +187,43 @@
 		A09A139827C636C90027C00C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A09AAD2B27CCC4C400E462FB /* UIComponents */,
+				A09AAD2A27CCC48400E462FB /* BasicAutoLayout */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A09AAD2527CCA45100E462FB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A09AAD2627CCA47400E462FB /* Enumerations.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		A09AAD2A27CCC48400E462FB /* BasicAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
 				A09A139927C6371B0027C00C /* SignUpViewController.swift */,
 				A09A139D27C659B50027C00C /* LoginViewController.swift */,
 				A06B66C827C8A968000CE5C7 /* SuccessViewController.swift */,
 			);
-			path = ViewControllers;
+			path = BasicAutoLayout;
+			sourceTree = "<group>";
+		};
+		A09AAD2B27CCC4C400E462FB /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A09AAD2C27CCC4F900E462FB /* UISignUpViewController.swift */,
+				A0D4BE4427CDF87600732FE6 /* PageViewController.swift */,
+				A0D4BE4627CDFBF700732FE6 /* UILoginViewController.swift */,
+				A09C4FF327CF972600E28414 /* SegmentViewController.swift */,
+				A03D1AF827D0DABB00267051 /* MapViewController.swift */,
+				A0A71C0727D220AC00014BFE /* SwitchTableViewCell.swift */,
+				A0A71C0927D220BD00014BFE /* CollectionTableViewCell.swift */,
+				A0E5CB4E27D5CFAF00DE6059 /* WebViewController.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +331,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A09A137227C636140027C00C /* LaunchScreen.storyboard in Resources */,
+				A09AAD2927CCC44300E462FB /* UIComponents.storyboard in Resources */,
+				A0E5CB5127D6222900DE6059 /* sample.pdf in Resources */,
 				A09A136F27C636140027C00C /* Assets.xcassets in Resources */,
 				A09A139C27C637330027C00C /* BasicAutoLayout.storyboard in Resources */,
 				A09A136D27C636130027C00C /* Main.storyboard in Resources */,
@@ -301,14 +360,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E5CB4F27D5CFAF00DE6059 /* WebViewController.swift in Sources */,
 				A0308F9327CC8A7B0091AA26 /* LoginViewController.swift in Sources */,
 				A0B5285227C8E5A60019E417 /* SignUpViewController.swift in Sources */,
+				A0D4BE4527CDF87600732FE6 /* PageViewController.swift in Sources */,
 				A09AAD2727CCA47400E462FB /* Enumerations.swift in Sources */,
+				A0D4BE4727CDFBF700732FE6 /* UILoginViewController.swift in Sources */,
 				A09A136A27C636130027C00C /* ViewController.swift in Sources */,
+				A09C4FF427CF972600E28414 /* SegmentViewController.swift in Sources */,
+				A0FB6C9627D7439500B98DA7 /* MyViewController.swift in Sources */,
+				A0A71C0A27D220BD00014BFE /* CollectionTableViewCell.swift in Sources */,
 				A069F5A327C8FD7200CFD11D /* Validation.swift in Sources */,
+				A0A71C0827D220AC00014BFE /* SwitchTableViewCell.swift in Sources */,
 				A09A136627C636130027C00C /* AppDelegate.swift in Sources */,
+				A09AAD2D27CCC4F900E462FB /* UISignUpViewController.swift in Sources */,
 				A09A136827C636130027C00C /* SceneDelegate.swift in Sources */,
 				A06B66C927C8A968000CE5C7 /* SuccessViewController.swift in Sources */,
+				A03D1AF927D0DABB00267051 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
