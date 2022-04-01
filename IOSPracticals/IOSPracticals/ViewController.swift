@@ -2,6 +2,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: - Variables
+    var coordinator: MainVCCoordinator?
+    
     //MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,18 +20,8 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "goToUIComponent", sender: self)
     }
     
-}//End of class
-
-//MARK: - File private functions
-extension ViewController {
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToBasicAutoLayout" {
-            guard segue.destination is SignUpViewController else { return }
-        } else if segue.identifier == "goToUIComponent" {
-            guard segue.destination is UISignUpViewController else { return }
-        }
+    @IBAction func goToWebServices(_ sender: UIButton) {
+        coordinator?.startWebService()
     }
     
-}//End of extension
-
+}//End of class

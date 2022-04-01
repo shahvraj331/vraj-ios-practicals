@@ -1,6 +1,10 @@
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, Storyboarded {
+    
+    //MARK: - Variables
+    var coordinator: AuthenticationCoordinator?
+    var receivedToken: String?
 
     //MARK: - Outlets
     @IBOutlet weak var lblGoToSignUpVC: UILabel!
@@ -16,28 +20,19 @@ class LoginViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func goToHomeScreen(_ sender: UIButton) {
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController {
-            let email = tfEmail.text?.trimmingCharacters(in: .whitespaces)
-            let password = tfPassword.text?.trimmingCharacters(in: .whitespaces)
-            var userData:[String: String] = [:]
-            if let userEmail = email, let userPassword = password {
-                if (Validation.isValidEmail(userEmail)) {
-                    userData = ["Email": userEmail, "Password": userPassword]
-                    viewController.userData = userData
-                    self.navigationController?.pushViewController(viewController, animated: true)
-                } else {
-                    Validation.showToast(controller: self, message: "Email not valid", seconds: 1.5)
-                }
-            }
+        guard let email = tfEmail.text?.trimmingCharacters(in: .whitespaces) else { return }
+        guard let password = tfPassword.text?.trimmingCharacters(in: .whitespaces) else { return }
+        
+        if (email.isEmpty || password.isEmpty) {
+            Validation.showToast(controller: self, message: "Enter missing credentials", seconds: 1.5)
+        } else {
+            validateCredentials(email, password)
         }
     }
     
-}//End of class
-
-//MARK: - File private functions
-extension LoginViewController {
-    
+    //MARK: - File private functions
     fileprivate func initializeView() {
+        self.title = "Login"
         let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goToSignUpVC(_: )))
         lblGoToSignUpVC.addGestureRecognizer(guestureRecognizer)
         ivGoogleLogo.layer.borderColor = UIColor.gray.cgColor
@@ -45,7 +40,39 @@ extension LoginViewController {
     }
     
     @objc fileprivate func goToSignUpVC(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        validateCredentials("eve.holt@reqres.in", "cityslicka")
     }
     
-}//End of extension
+    fileprivate func validateCredentials(_ email: String, _ password: String) {
+        let uploadDataModel = UploadData(email: email, password: password)
+        guard let url = URL(string: ApiUrl.loginRequestURL.rawValue) else { return }
+        guard let jsonData = try? JSONEncoder().encode(uploadDataModel) else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard error == nil else { return }
+            guard let data = data else { return }
+            guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else { return }
+            do {
+                guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
+                guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else { return }
+                guard let responseToken = try? JSONDecoder().decode(LoginSuccess.self, from: jsonData) else { return }
+                DispatchQueue.main.async {
+                    self.receivedToken = responseToken.token
+                    if (self.receivedToken != nil && response.statusCode == 200) {
+                        self.coordinator?.startUsersListVC()
+                    } else {
+                        Validation.showToast(controller: self, message: "Wrong credentials", seconds: 1.5)
+                    }
+                }
+            } catch {
+                return
+            }
+        }.resume()
+    }
+    
+}//End of class
