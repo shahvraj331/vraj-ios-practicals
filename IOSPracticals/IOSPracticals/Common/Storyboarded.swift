@@ -4,7 +4,6 @@
 //
 //  Created by Vraj Shah on 24/03/22.
 //
-
 import UIKit
 import Foundation
 
@@ -12,6 +11,8 @@ import Foundation
 enum Storyboard: String {
     case basicAutoLayout = "BasicAutoLayout"
     case webService = "WebService"
+    case mvcArchitecture = "MVCStoryboard"
+    case mvpArchitecture = "MVPStoryboard"
 }
 
 /// Storyboarded

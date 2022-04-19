@@ -6,9 +6,11 @@
 //
 
 import UIKit
-import Alamofire
 
 class AddUserViewController: UIViewController, Storyboarded {
+    
+    //MARK: - Variables
+    let viewModel = BaseViewModel()
     
     //MARK: - Outlets
     @IBOutlet weak var tfNameOfUser: UITextField!
@@ -19,6 +21,7 @@ class AddUserViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeView()
+        bindViewModel()
     }
     
     //MARK: - Actions
@@ -31,6 +34,17 @@ class AddUserViewController: UIViewController, Storyboarded {
     }
     
     //MARK: - File private functions
+    fileprivate func bindViewModel() {
+        viewModel.onAddUserFetchSuccess = { [weak self] responseData in
+            guard let self = self else { return }
+            guard let responseData = responseData else { return }
+            Validation.showToast(controller: self, message: "User added: \n \(responseData)", seconds: 2.0)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+                self.dismiss(animated: true)
+            }
+        }
+    }
+    
     fileprivate func initializeView() {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         dialogView.layer.cornerRadius = 5.0
@@ -41,13 +55,7 @@ class AddUserViewController: UIViewController, Storyboarded {
             if (name.isEmpty || job.isEmpty) {
                 Validation.showToast(controller: self, message: "Enter proper credentials", seconds: 1.5)
             } else {
-                AlamofireRequest.addSingleUser(controller: self, name: name, job: job) { responseData in
-                    guard let responseData = responseData else { return }
-                    Validation.showToast(controller: self, message: "User added: \n \(responseData)", seconds: 2.0)
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
-                        self.dismiss(animated: true)
-                    }
-                }
+                viewModel.addSingleUser(name: name, job: job)
             }
         }
     }

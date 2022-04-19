@@ -45,8 +45,9 @@ class UsersListViewController: UIViewController, Storyboarded {
         guard let url = URL(string: ApiUrl.delayResponseURL.rawValue) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             guard error == nil else { return }
+            guard let self = self else { return }
             guard let data = data else { return }
             guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else { return }
             do {
