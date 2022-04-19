@@ -28,4 +28,8 @@ class ViewController: UIViewController {
         coordinator?.startIOSArchitecture()
     }
     
+    @IBAction func goToCustomControl(_ sender: UIButton) {
+        coordinator?.startCustomControl()
+    }
+    
 }//End of class

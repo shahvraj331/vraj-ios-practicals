@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		000249B4B3771B1EB3C57241 /* Pods_IOSPracticals_IOSPracticalsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A693B859D2B16C7546E9111A /* Pods_IOSPracticals_IOSPracticalsUITests.framework */; };
 		5D94F37A2E0DDA7D14979F8A /* Pods_IOSPracticalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A91FB8A7DDF6B6613C29A9 /* Pods_IOSPracticalsTests.framework */; };
+		A00B62362816961F00AEA9D1 /* CustomControlStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00B62352816961F00AEA9D1 /* CustomControlStoryboard.storyboard */; };
+		A00B62392816967800AEA9D1 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B62382816967800AEA9D1 /* RegistrationViewController.swift */; };
+		A00B623B2816978800AEA9D1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B623A2816978800AEA9D1 /* CustomTextField.swift */; };
 		A017CE7227EDC12300179956 /* AuthenticationCoordiantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017CE7127EDC12300179956 /* AuthenticationCoordiantor.swift */; };
 		A017CE7427EDD43E00179956 /* SingleUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017CE7327EDD43E00179956 /* SingleUserViewController.swift */; };
 		A0308F9327CC8A7B0091AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A139D27C659B50027C00C /* LoginViewController.swift */; };
@@ -97,6 +100,9 @@
 		4D874E104734CE85B413AAC8 /* Pods-IOSPracticals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSPracticals.release.xcconfig"; path = "Target Support Files/Pods-IOSPracticals/Pods-IOSPracticals.release.xcconfig"; sourceTree = "<group>"; };
 		6CECCE1F0088A9DAD30B8254 /* Pods-IOSPracticalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSPracticalsTests.debug.xcconfig"; path = "Target Support Files/Pods-IOSPracticalsTests/Pods-IOSPracticalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7433F5147D50D0768D307CC4 /* Pods-IOSPracticals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSPracticals.debug.xcconfig"; path = "Target Support Files/Pods-IOSPracticals/Pods-IOSPracticals.debug.xcconfig"; sourceTree = "<group>"; };
+		A00B62352816961F00AEA9D1 /* CustomControlStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomControlStoryboard.storyboard; sourceTree = "<group>"; };
+		A00B62382816967800AEA9D1 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A00B623A2816978800AEA9D1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A017CE7127EDC12300179956 /* AuthenticationCoordiantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordiantor.swift; sourceTree = "<group>"; };
 		A017CE7327EDD43E00179956 /* SingleUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserViewController.swift; sourceTree = "<group>"; };
 		A03A4DA727F2FB1F00F9EBED /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
@@ -218,6 +224,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A00B62372816962B00AEA9D1 /* CustomControl */ = {
+			isa = PBXGroup;
+			children = (
+				A00B62382816967800AEA9D1 /* RegistrationViewController.swift */,
+				A00B623A2816978800AEA9D1 /* CustomTextField.swift */,
+			);
+			path = CustomControl;
+			sourceTree = "<group>";
+		};
 		A069F5A127C8FD4A00CFD11D /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +310,7 @@
 				A0F9F22627D89DCF000032F2 /* Navigation.storyboard */,
 				A0C58EA827EC76B00099B653 /* WebService.storyboard */,
 				A09A136B27C636130027C00C /* Main.storyboard */,
+				A00B62352816961F00AEA9D1 /* CustomControlStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -302,6 +318,7 @@
 		A09A139827C636C90027C00C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A00B62372816962B00AEA9D1 /* CustomControl */,
 				A0A629C928004FA500C11DAF /* IOSArchitecture */,
 				A0C58EAA27EC77B40099B653 /* WebService */,
 				A09AAD2B27CCC4C400E462FB /* UIComponents */,
@@ -611,6 +628,7 @@
 				A09A137227C636140027C00C /* LaunchScreen.storyboard in Resources */,
 				A09AAD2927CCC44300E462FB /* UIComponents.storyboard in Resources */,
 				A0E5CB5127D6222900DE6059 /* sample.pdf in Resources */,
+				A00B62362816961F00AEA9D1 /* CustomControlStoryboard.storyboard in Resources */,
 				A0C58EA927EC76B00099B653 /* WebService.storyboard in Resources */,
 				A09A136F27C636140027C00C /* Assets.xcassets in Resources */,
 				A09BF929280689DD00F3A923 /* MVPStoryboard.storyboard in Resources */,
@@ -755,12 +773,14 @@
 				A017CE7227EDC12300179956 /* AuthenticationCoordiantor.swift in Sources */,
 				A0F9F22F27D8A1E2000032F2 /* AppCoordinator.swift in Sources */,
 				A0F9F23527D8A333000032F2 /* FirstVCCoordinator.swift in Sources */,
+				A00B623B2816978800AEA9D1 /* CustomTextField.swift in Sources */,
 				A0F9F22A27D89E0C000032F2 /* FirstViewController.swift in Sources */,
 				A0A629D3280065D400C11DAF /* MVCCoordinator.swift in Sources */,
 				A0A629CF2800593100C11DAF /* AppLoginViewController.swift in Sources */,
 				A03E11A127F17EE300ACF751 /* AddUserViewController.swift in Sources */,
 				A0308F9327CC8A7B0091AA26 /* LoginViewController.swift in Sources */,
 				A09BF92B2806930900F3A923 /* MVPModel.swift in Sources */,
+				A00B62392816967800AEA9D1 /* RegistrationViewController.swift in Sources */,
 				A0C58EAC27EC77CB0099B653 /* UsersListViewController.swift in Sources */,
 				A0F9F22D27D8A185000032F2 /* Coordinator.swift in Sources */,
 				A0B5285227C8E5A60019E417 /* SignUpViewController.swift in Sources */,

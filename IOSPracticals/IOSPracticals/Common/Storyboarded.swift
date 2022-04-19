@@ -13,6 +13,7 @@ enum Storyboard: String {
     case webService = "WebService"
     case mvcArchitecture = "MVCStoryboard"
     case mvpArchitecture = "MVPStoryboard"
+    case customControl = "CustomControlStoryboard"
 }
 
 /// Storyboarded

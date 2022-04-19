@@ -83,7 +83,7 @@ extension UISignUpViewController {
         imageOfUser.layer.masksToBounds = true
         imageOfUser.layer.cornerRadius = imageOfUser.frame.height / 2
         
-        MyViewController.addComponentResigner(view)
+        self.addComponentResigner(view)
         
         dateFormatter.dateFormat = "MM/dd/yyyy"
     }

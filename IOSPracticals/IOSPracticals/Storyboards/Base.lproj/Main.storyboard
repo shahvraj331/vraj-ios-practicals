@@ -76,6 +76,18 @@
                                     <action selector="goToIOSArchitecture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8p6-9I-EEH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-cG-arU">
+                                <rect key="frame" x="41.5" y="409" width="331" height="37"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom Control">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToCustomControl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNv-LG-OiW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,12 +101,15 @@
                             <constraint firstItem="bVi-GN-a9P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cQb-hC-MxQ"/>
                             <constraint firstItem="HZC-0j-Tt0" firstAttribute="top" secondItem="8Wp-ep-9dU" secondAttribute="bottom" constant="30" id="cmv-SJ-dAQ"/>
                             <constraint firstItem="6aU-RM-0fj" firstAttribute="top" secondItem="XTB-ZZ-Tua" secondAttribute="bottom" constant="30" id="evx-SQ-2xi"/>
+                            <constraint firstItem="9pc-cG-arU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fwb-gS-dNN"/>
                             <constraint firstItem="8Wp-ep-9dU" firstAttribute="top" secondItem="bVi-GN-a9P" secondAttribute="bottom" constant="30" id="geE-WD-cJh"/>
                             <constraint firstItem="HZC-0j-Tt0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hCR-Rg-Hie"/>
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hat-PD-fRr"/>
                             <constraint firstItem="6aU-RM-0fj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hhs-Jt-Rec"/>
                             <constraint firstItem="8Wp-ep-9dU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="lTd-q4-nBP"/>
+                            <constraint firstItem="9pc-cG-arU" firstAttribute="top" secondItem="6aU-RM-0fj" secondAttribute="bottom" constant="30" id="nXK-k8-xVh"/>
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="our-vF-lQo"/>
+                            <constraint firstItem="9pc-cG-arU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="uGO-8X-GPo"/>
                         </constraints>
                     </view>
                     <connections>

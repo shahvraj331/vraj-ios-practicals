@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="Y6W-OH-hqX" customClass="RegistrationViewController" customModule="IOSPracticals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pQa-h8-20y">
+                                <rect key="frame" x="41.5" y="94" width="331" height="192.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-aH-ntW" customClass="CustomTextField" customModule="IOSPracticals" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                <imageReference key="value" image="note.text" catalog="system" symbolScale="small" renderingMode="original"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textStartPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMf-TC-WmE" customClass="CustomTextField" customModule="IOSPracticals" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="38.5" width="331" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                <imageReference key="value" image="person.fill" catalog="system" symbolScale="small" renderingMode="original"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textStartPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zF6-YZ-z6e" customClass="CustomTextField" customModule="IOSPracticals" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="77" width="331" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                <imageReference key="value" image="mail.fill" catalog="system" symbolScale="small" renderingMode="original"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textStartPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-vQ-Lnu" customClass="CustomTextField" customModule="IOSPracticals" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="115.5" width="331" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textStartPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                <imageReference key="value" image="phone.fill" catalog="system" symbolScale="small"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbY-Gs-Q2F" customClass="CustomTextField" customModule="IOSPracticals" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="154" width="331" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                <imageReference key="value" image="lock.fill" catalog="system" symbolScale="small"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textStartPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pQa-h8-20y" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="3hN-bR-3k0"/>
+                            <constraint firstItem="pQa-h8-20y" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Ey0-u8-yvx"/>
+                            <constraint firstItem="pQa-h8-20y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="Gx9-N5-d1V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="72"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="LQS-vQ-Lnu">
+            <size key="intrinsicContentSize" width="120.5" height="38.5"/>
+        </designable>
+        <designable name="MMf-TC-WmE">
+            <size key="intrinsicContentSize" width="91" height="38.5"/>
+        </designable>
+        <designable name="m0P-aH-ntW">
+            <size key="intrinsicContentSize" width="65" height="38.5"/>
+        </designable>
+        <designable name="mbY-Gs-Q2F">
+            <size key="intrinsicContentSize" width="88.5" height="38.5"/>
+        </designable>
+        <designable name="zF6-YZ-z6e">
+            <size key="intrinsicContentSize" width="63.5" height="38.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <image name="mail.fill" catalog="system" width="128" height="93"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
