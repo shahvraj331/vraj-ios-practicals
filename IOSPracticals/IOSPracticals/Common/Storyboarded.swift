@@ -12,6 +12,7 @@ import Foundation
 enum Storyboard: String {
     case basicAutoLayout = "BasicAutoLayout"
     case webService = "WebService"
+    case chatStoryboard = "DependencyStoryboard"
 }
 
 /// Storyboarded

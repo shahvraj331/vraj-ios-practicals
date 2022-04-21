@@ -24,4 +24,8 @@ class ViewController: UIViewController {
         coordinator?.startWebService()
     }
     
+    @IBAction func goToDependencyManager(_ sender: UIButton) {
+        coordinator?.startDependencyManager()
+    }
+    
 }//End of class

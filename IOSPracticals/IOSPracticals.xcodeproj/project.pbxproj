@@ -44,6 +44,12 @@
 		A0C58EAC27EC77CB0099B653 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C58EAB27EC77CB0099B653 /* UsersListViewController.swift */; };
 		A0C58EAF27EC78E70099B653 /* SingleUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C58EAE27EC78E70099B653 /* SingleUserTableViewCell.swift */; };
 		A0C58EB127EC91AA0099B653 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C58EB027EC91AA0099B653 /* UsersData.swift */; };
+		A0CBEEB7281157B300CF81D3 /* DependencyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CBEEB6281157B300CF81D3 /* DependencyStoryboard.storyboard */; };
+		A0CBEEB9281157ED00CF81D3 /* FirstUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CBEEB8281157ED00CF81D3 /* FirstUserViewController.swift */; };
+		A0CBEEBC2811581500CF81D3 /* SecondUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CBEEBB2811581500CF81D3 /* SecondUserViewController.swift */; };
+		A0CBEEC12811590C00CF81D3 /* DependencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CBEEC02811590C00CF81D3 /* DependencyCoordinator.swift */; };
+		A0CBEEC428115C8900CF81D3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A0CBEEC328115C8900CF81D3 /* RxRelay */; };
+		A0CBEEC628115C8900CF81D3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A0CBEEC528115C8900CF81D3 /* RxSwift */; };
 		A0D4BE4527CDF87600732FE6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4BE4427CDF87600732FE6 /* PageViewController.swift */; };
 		A0D4BE4727CDFBF700732FE6 /* UILoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4BE4627CDFBF700732FE6 /* UILoginViewController.swift */; };
 		A0D7981B27E8ADA90028958E /* Declarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D7981A27E8ADA90028958E /* Declarations.swift */; };
@@ -125,6 +131,10 @@
 		A0C58EAB27EC77CB0099B653 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		A0C58EAE27EC78E70099B653 /* SingleUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserTableViewCell.swift; sourceTree = "<group>"; };
 		A0C58EB027EC91AA0099B653 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
+		A0CBEEB6281157B300CF81D3 /* DependencyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DependencyStoryboard.storyboard; sourceTree = "<group>"; };
+		A0CBEEB8281157ED00CF81D3 /* FirstUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstUserViewController.swift; sourceTree = "<group>"; };
+		A0CBEEBB2811581500CF81D3 /* SecondUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondUserViewController.swift; sourceTree = "<group>"; };
+		A0CBEEC02811590C00CF81D3 /* DependencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyCoordinator.swift; sourceTree = "<group>"; };
 		A0D4BE4427CDF87600732FE6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		A0D4BE4627CDFBF700732FE6 /* UILoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILoginViewController.swift; sourceTree = "<group>"; };
 		A0D7981A27E8ADA90028958E /* Declarations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Declarations.swift; sourceTree = "<group>"; };
@@ -150,6 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CBEEC628115C8900CF81D3 /* RxSwift in Frameworks */,
+				A0CBEEC428115C8900CF81D3 /* RxRelay in Frameworks */,
 				AA49B832C48D71007670ADBF /* Pods_IOSPracticals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +288,7 @@
 				A09AAD2827CCC44300E462FB /* UIComponents.storyboard */,
 				A0F9F22627D89DCF000032F2 /* Navigation.storyboard */,
 				A0C58EA827EC76B00099B653 /* WebService.storyboard */,
+				A0CBEEB6281157B300CF81D3 /* DependencyStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -283,6 +296,7 @@
 		A09A139827C636C90027C00C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A0CBEEBA281157F500CF81D3 /* DependencyManager */,
 				A0C58EAA27EC77B40099B653 /* WebService */,
 				A09AAD2B27CCC4C400E462FB /* UIComponents */,
 				A09AAD2A27CCC48400E462FB /* BasicAutoLayout */,
@@ -351,6 +365,15 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		A0CBEEBA281157F500CF81D3 /* DependencyManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0CBEEB8281157ED00CF81D3 /* FirstUserViewController.swift */,
+				A0CBEEBB2811581500CF81D3 /* SecondUserViewController.swift */,
+			);
+			path = DependencyManager;
+			sourceTree = "<group>";
+		};
 		A0F9F22827D89DEA000032F2 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +397,7 @@
 				A097B64327DA0B5600B7D919 /* MainVCCoordinator.swift */,
 				A097B64727DA18E900B7D919 /* FourthVCCoordinator.swift */,
 				A017CE7127EDC12300179956 /* AuthenticationCoordiantor.swift */,
+				A0CBEEC02811590C00CF81D3 /* DependencyCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -396,6 +420,10 @@
 			dependencies = (
 			);
 			name = IOSPracticals;
+			packageProductDependencies = (
+				A0CBEEC328115C8900CF81D3 /* RxRelay */,
+				A0CBEEC528115C8900CF81D3 /* RxSwift */,
+			);
 			productName = IOSPracticals;
 			productReference = A09A136227C636130027C00C /* IOSPracticals.app */;
 			productType = "com.apple.product-type.application";
@@ -471,6 +499,9 @@
 				Base,
 			);
 			mainGroup = A09A135927C636130027C00C;
+			packageReferences = (
+				A0CBEEC228115C8900CF81D3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = A09A136327C636130027C00C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -494,6 +525,7 @@
 				A09A136F27C636140027C00C /* Assets.xcassets in Resources */,
 				A0F9F22727D89DCF000032F2 /* Navigation.storyboard in Resources */,
 				A09A139C27C637330027C00C /* BasicAutoLayout.storyboard in Resources */,
+				A0CBEEB7281157B300CF81D3 /* DependencyStoryboard.storyboard in Resources */,
 				A09A136D27C636130027C00C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,8 +656,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CBEEB9281157ED00CF81D3 /* FirstUserViewController.swift in Sources */,
 				A0E5CB4F27D5CFAF00DE6059 /* WebViewController.swift in Sources */,
 				A0AAAB4B27DB5B75000B0FE5 /* FifthViewController.swift in Sources */,
+				A0CBEEBC2811581500CF81D3 /* SecondUserViewController.swift in Sources */,
 				A0F9F23127D8A251000032F2 /* SecondViewController.swift in Sources */,
 				A017CE7227EDC12300179956 /* AuthenticationCoordiantor.swift in Sources */,
 				A0F9F22F27D8A1E2000032F2 /* AppCoordinator.swift in Sources */,
@@ -642,6 +676,7 @@
 				A097B64427DA0B5600B7D919 /* MainVCCoordinator.swift in Sources */,
 				A09AAD2727CCA47400E462FB /* Enumerations.swift in Sources */,
 				A0D7981B27E8ADA90028958E /* Declarations.swift in Sources */,
+				A0CBEEC12811590C00CF81D3 /* DependencyCoordinator.swift in Sources */,
 				A03A4DA827F2FB1F00F9EBED /* AlamofireRequest.swift in Sources */,
 				A0F9F23727D8A33E000032F2 /* SecondVCCoordinator.swift in Sources */,
 				A09A136A27C636130027C00C /* ViewController.swift in Sources */,
@@ -1027,6 +1062,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0CBEEC228115C8900CF81D3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0CBEEC328115C8900CF81D3 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0CBEEC228115C8900CF81D3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		A0CBEEC528115C8900CF81D3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0CBEEC228115C8900CF81D3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A09A135A27C636130027C00C /* Project object */;
 }

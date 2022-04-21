@@ -64,6 +64,18 @@
                                     <action selector="goToWebServices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HRH-Sh-Ehw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdg-gi-VQ2">
+                                <rect key="frame" x="41.5" y="342" width="331" height="37"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dependency Manager">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToDependencyManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p97-cM-FgX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,7 +83,9 @@
                             <constraint firstItem="bVi-GN-a9P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="8Tn-KT-yUB"/>
                             <constraint firstItem="bVi-GN-a9P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="NI7-0p-Daa"/>
                             <constraint firstItem="8Wp-ep-9dU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Na0-TX-vIt"/>
+                            <constraint firstItem="sdg-gi-VQ2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NnC-Tn-KWg"/>
                             <constraint firstItem="HZC-0j-Tt0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xjq-h3-6cy"/>
+                            <constraint firstItem="sdg-gi-VQ2" firstAttribute="top" secondItem="XTB-ZZ-Tua" secondAttribute="bottom" constant="30" id="bRb-x9-JV4"/>
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="top" secondItem="HZC-0j-Tt0" secondAttribute="bottom" constant="30" id="cJc-Mb-TL6"/>
                             <constraint firstItem="bVi-GN-a9P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cQb-hC-MxQ"/>
                             <constraint firstItem="HZC-0j-Tt0" firstAttribute="top" secondItem="8Wp-ep-9dU" secondAttribute="bottom" constant="30" id="cmv-SJ-dAQ"/>
@@ -80,6 +94,7 @@
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hat-PD-fRr"/>
                             <constraint firstItem="8Wp-ep-9dU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="lTd-q4-nBP"/>
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="our-vF-lQo"/>
+                            <constraint firstItem="sdg-gi-VQ2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="thH-Tw-xuX"/>
                         </constraints>
                     </view>
                     <connections>

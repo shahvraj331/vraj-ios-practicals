@@ -30,4 +30,11 @@ class MainVCCoordinator: Coordinator {
         }
     }
     
+    func startDependencyManager() {
+        if let navController = navController {
+            let chatApp = DependencyCoordinator(navController)
+            chatApp.start()
+        }
+    }
+    
 }//End of class
