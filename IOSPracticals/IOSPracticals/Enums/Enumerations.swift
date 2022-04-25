@@ -28,10 +28,3 @@ enum SignUpValidation: Error {
         }
     }
 }
-
-enum ApiUrl: String {
-    case loginRequestURL = "https://reqres.in/api/login"
-    case delayResponseURL = "https://reqres.in/api/users?delay=3"
-    case singleUserURL = "https://reqres.in/api/users/"
-    case addUserURL = "https://reqres.in/api/users"
-}

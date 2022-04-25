@@ -64,6 +64,18 @@
                                     <action selector="goToWebServices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HRH-Sh-Ehw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-RM-0fj">
+                                <rect key="frame" x="41.5" y="342" width="331" height="37"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="IOS Architecture">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToIOSArchitecture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8p6-9I-EEH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,12 +84,15 @@
                             <constraint firstItem="bVi-GN-a9P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="NI7-0p-Daa"/>
                             <constraint firstItem="8Wp-ep-9dU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Na0-TX-vIt"/>
                             <constraint firstItem="HZC-0j-Tt0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xjq-h3-6cy"/>
+                            <constraint firstItem="6aU-RM-0fj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZNm-rv-DwI"/>
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="top" secondItem="HZC-0j-Tt0" secondAttribute="bottom" constant="30" id="cJc-Mb-TL6"/>
                             <constraint firstItem="bVi-GN-a9P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cQb-hC-MxQ"/>
                             <constraint firstItem="HZC-0j-Tt0" firstAttribute="top" secondItem="8Wp-ep-9dU" secondAttribute="bottom" constant="30" id="cmv-SJ-dAQ"/>
+                            <constraint firstItem="6aU-RM-0fj" firstAttribute="top" secondItem="XTB-ZZ-Tua" secondAttribute="bottom" constant="30" id="evx-SQ-2xi"/>
                             <constraint firstItem="8Wp-ep-9dU" firstAttribute="top" secondItem="bVi-GN-a9P" secondAttribute="bottom" constant="30" id="geE-WD-cJh"/>
                             <constraint firstItem="HZC-0j-Tt0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hCR-Rg-Hie"/>
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hat-PD-fRr"/>
+                            <constraint firstItem="6aU-RM-0fj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hhs-Jt-Rec"/>
                             <constraint firstItem="8Wp-ep-9dU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="lTd-q4-nBP"/>
                             <constraint firstItem="XTB-ZZ-Tua" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="our-vF-lQo"/>
                         </constraints>
@@ -97,7 +112,7 @@
                 <viewControllerPlaceholder storyboardName="BasicAutoLayout" id="yk2-66-taz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBZ-Mx-pUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="-137"/>
+            <point key="canvasLocation" x="738" y="145"/>
         </scene>
         <!--UIComponents-->
         <scene sceneID="sHd-4E-UWD">
@@ -105,7 +120,7 @@
                 <viewControllerPlaceholder storyboardName="UIComponents" id="gNg-X8-JaY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwz-Ho-Vh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="-103"/>
+            <point key="canvasLocation" x="729" y="79"/>
         </scene>
         <!--Navigation-->
         <scene sceneID="iy2-ao-REd">
@@ -115,7 +130,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuR-Ym-Pa3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682" y="166"/>
+            <point key="canvasLocation" x="672" y="-14"/>
         </scene>
     </scenes>
     <resources>

@@ -24,4 +24,8 @@ class ViewController: UIViewController {
         coordinator?.startWebService()
     }
     
+    @IBAction func goToIOSArchitecture(_ sender: UIButton) {
+        coordinator?.startIOSArchitecture()
+    }
+    
 }//End of class

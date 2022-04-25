@@ -9,3 +9,5 @@ import Foundation
 
 //MARK: - Typealias
 typealias completionHandler = (String) -> Void
+typealias newUserResponseCallBack = (NewUserResponse?) -> Void
+typealias singleUserResponseCallBack = (SingleUserResponse?) -> Void
