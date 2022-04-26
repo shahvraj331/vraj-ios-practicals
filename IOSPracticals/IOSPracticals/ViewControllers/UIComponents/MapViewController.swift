@@ -8,6 +8,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var currentMapView: MKMapView!
     @IBOutlet weak var scMapType: UISegmentedControl!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var btnBack: UIImageView!
     
     //MARK: - Variables
     let annotations = MKPointAnnotation()
@@ -16,6 +17,7 @@ class MapViewController: UIViewController {
     //MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBackFunctionality()
         pvCities.delegate = self
         pvCities.dataSource = self
     }
@@ -32,6 +34,32 @@ class MapViewController: UIViewController {
             }
             self.activityIndicator.stopAnimating()
         }
+    }
+    
+    //MARK: - File private functions
+    fileprivate func updateMap(_ cityIndex: Int, _ latitude: Double, _ longitude: Double) {
+        var region: MKCoordinateRegion
+        currentMapView.removeAnnotation(annotations)
+        if cityIndex != 0 {
+            annotations.title = citiesList[cityIndex]
+            annotations.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            currentMapView.addAnnotation(annotations)
+            region = MKCoordinateRegion(center: annotations.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
+        } else {
+            region = MKCoordinateRegion(.world)
+        }
+        UIView.animate(withDuration: 3.0) {
+            self.currentMapView.setRegion(region, animated: true)
+        }
+    }
+    
+    fileprivate func addBackFunctionality() {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goBackToHome))
+        btnBack.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func goBackToHome() {
+        dismiss(animated: true, completion: nil)
     }
     
 }//End of class
@@ -65,27 +93,6 @@ extension MapViewController: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return citiesList.count
-    }
-    
-}//End of extension
-
-//MARK: - File private functions
-extension MapViewController {
-    
-    fileprivate func updateMap(_ cityIndex: Int, _ latitude: Double, _ longitude: Double) {
-        var region: MKCoordinateRegion
-        currentMapView.removeAnnotation(annotations)
-        if cityIndex != 0 {
-            annotations.title = citiesList[cityIndex]
-            annotations.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            currentMapView.addAnnotation(annotations)
-            region = MKCoordinateRegion(center: annotations.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
-        } else {
-            region = MKCoordinateRegion(.world)
-        }
-        UIView.animate(withDuration: 3.0) {
-            self.currentMapView.setRegion(region, animated: true)
-        }
     }
     
 }//End of extension

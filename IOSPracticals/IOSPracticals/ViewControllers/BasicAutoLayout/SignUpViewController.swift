@@ -48,22 +48,21 @@ class SignUpViewController: UIViewController {
         }
     }
     
-}//End of class
-
-//MARK: - File private functions
-extension SignUpViewController {
-    
-    @objc fileprivate func goToLoginVC(_ sender: Any) {
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-            self.navigationController?.pushViewController(viewController, animated: true)
-        }
+    @IBAction func showOrHidePasswordAction(_ sender: UIButton) {
+        tfPassword.isSecureTextEntry = sender.isSelected
+        sender.isSelected = !sender.isSelected
     }
     
+    //MARK: - File private functions
     fileprivate func initializeView() {
-        let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goToLoginVC(_: )))
-        lblGoToLoginVC.addGestureRecognizer(guestureRecognizer)
+        lblGoToLoginVC.addRangeGesture(stringRange: "Log In") {
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
         ivGoogleLogo.layer.borderColor = UIColor.gray.cgColor
         ivGoogleLogo.layer.borderWidth = 0.5
+        self.dismissKeyboardOnTap(view)
     }
     
     fileprivate func validateForm() throws {
@@ -92,6 +91,24 @@ extension SignUpViewController {
                 }
             }
         }
+    }
+    
+}//End of class
+
+//MARK: - UITextFieldDelegate
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.tfFullName {
+            textField.resignFirstResponder()
+            self.tfEmail.becomeFirstResponder()
+        } else if textField == tfEmail {
+            textField.resignFirstResponder()
+            self.tfPassword.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
     
 }//End of extension

@@ -2,7 +2,7 @@ import UIKit
 
 extension UIViewController {
 
-    func addComponentResigner(_ view: UIView) {
+    func dismissKeyboardOnTap(_ view: UIView) {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }

@@ -62,11 +62,7 @@ class UISignUpViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
-}//End of class
-
-//MARK: - file private functions
-extension UISignUpViewController {
-    
+    //MARK: - File private functions
     fileprivate func setUpViewController() {
         tfEmailOfUser.layer.borderColor = UIColor.black.cgColor
         tfEmailOfUser.layer.borderWidth = 0.5
@@ -82,9 +78,8 @@ extension UISignUpViewController {
         
         imageOfUser.layer.masksToBounds = true
         imageOfUser.layer.cornerRadius = imageOfUser.frame.height / 2
-        
-        self.addComponentResigner(view)
-        
+
+        self.dismissKeyboardOnTap(view)
         dateFormatter.dateFormat = DateFormat.dateMonthYear.rawValue
     }
     
@@ -122,7 +117,7 @@ extension UISignUpViewController {
         tvBioOfUser.endEditing(true)
     }
     
-}//End of extension
+}//End of class
 
 //MARK: - UIImagePickerControllerDelegate
 extension UISignUpViewController: UIImagePickerControllerDelegate {
