@@ -30,9 +30,15 @@ class LoginViewController: UIViewController, Storyboarded {
         }
     }
     
+    @IBAction func showOrHidePasswordAction(_ sender: UIButton) {
+        tfPassword.isSecureTextEntry = sender.isSelected
+        sender.isSelected = !sender.isSelected
+    }
+    
     //MARK: - File private functions
     fileprivate func initializeView() {
         self.title = "Login"
+        self.dismissKeyboardOnTap(view)
         let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goToSignUpVC(_: )))
         lblGoToSignUpVC.addGestureRecognizer(guestureRecognizer)
         ivGoogleLogo.layer.borderColor = UIColor.gray.cgColor
@@ -76,3 +82,18 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
 }//End of class
+
+//MARK: - UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == tfEmail {
+            textField.resignFirstResponder()
+            self.tfPassword.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+}//End of extension

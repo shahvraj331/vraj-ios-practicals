@@ -28,6 +28,9 @@
                                 <rect key="frame" x="83" y="375.5" width="248" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="ilc-7k-7NO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdK-nP-pfq">
                                 <rect key="frame" x="207" y="540.5" width="0.0" height="0.0"/>
@@ -48,7 +51,13 @@
                             <constraint firstItem="SdK-nP-pfq" firstAttribute="top" secondItem="OUA-Lf-0cK" secondAttribute="bottom" constant="50" id="qba-PJ-Xwi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ptW-N0-PxK"/>
+                    <navigationItem key="navigationItem" id="ptW-N0-PxK">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrow.left" catalog="system" id="kcb-Kk-0VW">
+                            <connections>
+                                <action selector="btnBackAction:" destination="Y6W-OH-hqX" id="ddo-GU-Fpp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblMessageFromSecond" destination="SdK-nP-pfq" id="NsG-RS-tmy"/>
                         <outlet property="tfMessageToSecond" destination="k6w-ty-puk" id="If8-oe-b7u"/>
@@ -86,6 +95,9 @@
                                 <rect key="frame" x="83" y="329" width="248" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jBc-AB-6yo" id="dL3-ix-sjk"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykt-ge-FjO">
                                 <rect key="frame" x="207" y="545" width="0.0" height="0.0"/>
@@ -191,6 +203,9 @@
                                 <rect key="frame" x="83" y="322.5" width="248" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JAE-Ch-gjk" id="A61-SK-27X"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp6-4b-d7o">
                                 <rect key="frame" x="116" y="386.5" width="182" height="31"/>
@@ -243,6 +258,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
