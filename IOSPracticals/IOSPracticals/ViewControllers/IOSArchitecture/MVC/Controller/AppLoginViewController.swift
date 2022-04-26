@@ -13,8 +13,8 @@ class AppLoginViewController: UIViewController, Storyboarded {
     var coordinator: MVCCoordinator?
     
     //MARK: - Outlets
-    @IBOutlet weak var lblEmail: UITextField!
-    @IBOutlet weak var lblPassword: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
     
     //MARK: - UIViewController
     override func viewDidLoad() {
@@ -24,8 +24,8 @@ class AppLoginViewController: UIViewController, Storyboarded {
     
     //MARK: - Actions
     @IBAction func loginValidateAction(_ sender: UIButton) {
-        guard let email = lblEmail.text else { return }
-        guard let password = lblPassword.text else { return }
+        guard let email = txtEmail.text else { return }
+        guard let password = txtPassword.text else { return }
         
         if (email.isEmpty || password.isEmpty) {
             return
@@ -36,3 +36,18 @@ class AppLoginViewController: UIViewController, Storyboarded {
     }
     
 }//End of class
+
+//MARK: - UITextFieldDelegate
+extension AppLoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == txtEmail {
+            textField.resignFirstResponder()
+            txtPassword.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+}//End of extension

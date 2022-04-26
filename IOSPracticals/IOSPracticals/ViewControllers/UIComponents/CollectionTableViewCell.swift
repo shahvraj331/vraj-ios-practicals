@@ -16,10 +16,7 @@ class CollectionTableViewCell: UITableViewCell {
     //MARK: - UIViewController
     override func awakeFromNib() {
         super.awakeFromNib()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        pvNoOfAlterations.dataSource = self
-        pvNoOfAlterations.delegate = self
+        setUpDelegate()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,6 +35,14 @@ class CollectionTableViewCell: UITableViewCell {
         previousStpValue = numberOfItems
         stpUpdateCollectionView.value = Double(numberOfItems)
         collectionView.reloadData()
+    }
+    
+    //MARK: - File private functions
+    fileprivate func setUpDelegate() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        pvNoOfAlterations.dataSource = self
+        pvNoOfAlterations.delegate = self
     }
     
 }//End of class

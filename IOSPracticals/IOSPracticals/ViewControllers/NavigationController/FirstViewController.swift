@@ -28,12 +28,17 @@ class FirstViewController: UIViewController {
         }
     }
     
+    @IBAction func btnBackAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: - File private functions
     fileprivate func setUpViewController() {
         self.title = "First"
         if let navController = self.navigationController {
             coordinator = FirstVCCoordinator(navController)
         }
+        self.dismissKeyboardOnTap(view)
     }
     
 }//End of class
@@ -43,6 +48,16 @@ extension FirstViewController: DataTransferDelegate {
     
     func passData(_ passedData: String) {
         lblMessageFromSecond.text = passedData
+    }
+    
+}//End of extension
+
+//MARK: - UITextFieldDelegate
+extension FirstViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }//End of extension

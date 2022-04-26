@@ -13,7 +13,6 @@ class FourthViewController: UIViewController {
     //MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpBarButton()
         setUpViewController()
     }
     
@@ -54,6 +53,18 @@ class FourthViewController: UIViewController {
     fileprivate func setUpViewController() {
         self.title = "Fourth"
         backToFirstVCButton = UIBarButtonItem()
+        self.dismissKeyboardOnTap(view)
+        setUpBarButton()
     }
     
 }//End of class
+
+//MARK: - UITextFieldDelegate
+extension FourthViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}//End of extension
