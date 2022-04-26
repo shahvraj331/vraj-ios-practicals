@@ -27,4 +27,9 @@ enum SignUpValidation: Error {
             return "Password length too short"
         }
     }
-}
+}//End of enum
+
+enum DateFormat: String {
+    case monthDateYear = "MM/dd/yyyy"
+    case dateMonthYear = "dd/MM/yyyy"
+}//End of enum
