@@ -20,7 +20,7 @@ class MainVCCoordinator: Coordinator {
     }
     
     func finishToRoot() {
-        
+        navController?.popToRootViewController(animated: true)
     }
     
     func startWebService() {
@@ -30,4 +30,22 @@ class MainVCCoordinator: Coordinator {
         }
     }
     
+    func startIOSArchitecture() {
+        let iosArchitecture = ArchitectureViewController.instantiate(from: .mvcArchitecture)
+        iosArchitecture.coordinator = self
+        navController?.pushViewController(iosArchitecture, animated: true)
+    }
+    
+    func startMVCArchitecture() {
+        if let navController = navController {
+            let loginVC = MVCCoordinator(navController)
+            loginVC.start()
+        }
+    }
+    
+    func startMVPArchitecture() {
+        let mvpArchitecture = MVPViewController.instantiate(from: .mvpArchitecture)
+        navController?.pushViewController(mvpArchitecture, animated: true)
+    }
+        
 }//End of class
