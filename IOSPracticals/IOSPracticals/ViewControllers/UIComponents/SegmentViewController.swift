@@ -15,17 +15,17 @@ class SegmentViewController: UIViewController {
     //MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        initUI()
+    }
+    
+    //MARK: - File private functions
+    fileprivate func initUI() {
         addBackFunctionality()
         tableView.delegate = self
         tableView.dataSource = self
         setUpHeaderAndFooter()
         setUpRefreshControl()
     }
-    
-}//End of class
-
-//MARK: - File private functions
-extension SegmentViewController {
     
     fileprivate func addBackFunctionality() {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goBackToHome))
@@ -58,7 +58,7 @@ extension SegmentViewController {
         tableView.refreshControl = refreshControl
     }
     
-}//end of extension
+}//End of class
 
 //MARK: - UITableViewDelegate
 extension SegmentViewController: UITableViewDelegate {

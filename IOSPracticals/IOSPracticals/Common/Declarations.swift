@@ -11,3 +11,4 @@ import Foundation
 typealias completionHandler = (String) -> Void
 typealias newUserResponseCallBack = (NewUserResponse?) -> Void
 typealias singleUserResponseCallBack = (SingleUserResponse?) -> Void
+typealias methodHandler = () -> Void
