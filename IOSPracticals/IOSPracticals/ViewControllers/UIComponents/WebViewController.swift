@@ -11,9 +11,7 @@ class WebViewController: UIViewController {
     //MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackFunctionality()
-        loadUrl("")
-        searchBar.delegate = self
+        initUI()
     }
     
     //MARK: - Actions
@@ -24,28 +22,12 @@ class WebViewController: UIViewController {
         webView.loadFileURL(pdfURL, allowingReadAccessTo: pdfURL.deletingLastPathComponent())
     }
     
-}//End of class
-
-//MARK: - UISearchBarDelegate
-extension WebViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let urlString = searchBar.text?.lowercased()
-        if let text = urlString {
-            if text.starts(with: "http://") {
-                loadUrl(text)
-            } else if (text.hasPrefix("www")) || (text.hasSuffix(".com")){
-                loadUrl("http://\(text)")
-            }else {
-                searchTextOnGoogle(text)
-            }
-        }
+    //MARK: - File private functions
+    fileprivate func initUI() {
+        addBackFunctionality()
+        loadUrl("")
+        searchBar.delegate = self
     }
-    
-}//End of extension
-
-//MARK: - File private functions
-extension WebViewController {
     
     fileprivate func addBackFunctionality() {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goBackToHome))
@@ -77,5 +59,23 @@ extension WebViewController {
         let searchString = textComponents.joined(separator: "+")
         loadUrl("https://www.google.com/search?q=" + searchString)
     }
+    
+}//End of class
 
+//MARK: - UISearchBarDelegate
+extension WebViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let urlString = searchBar.text?.lowercased()
+        if let text = urlString {
+            if text.starts(with: "http://") {
+                loadUrl(text)
+            } else if (text.hasPrefix("www")) || (text.hasSuffix(".com")){
+                loadUrl("http://\(text)")
+            } else {
+                searchTextOnGoogle(text)
+            }
+        }
+    }
+    
 }//End of extension
