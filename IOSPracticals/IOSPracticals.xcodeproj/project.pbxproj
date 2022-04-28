@@ -18,6 +18,9 @@
 		A04C867F28003B4B00C42F24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A136927C636130027C00C /* ViewController.swift */; };
 		A069F5A327C8FD7200CFD11D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A069F5A227C8FD7200CFD11D /* Validation.swift */; };
 		A06B66C927C8A968000CE5C7 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B66C827C8A968000CE5C7 /* SuccessViewController.swift */; };
+		A08FB1C628190CE300B31625 /* LabelTapGuestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FB1C428190CE300B31625 /* LabelTapGuestureRecognizer.swift */; };
+		A08FB1C728190CE300B31625 /* RangeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FB1C528190CE300B31625 /* RangeGestureRecognizer.swift */; };
+		A08FB1C928193BEB00B31625 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09AAD2627CCA47400E462FB /* Enumerations.swift */; };
 		A097B64427DA0B5600B7D919 /* MainVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097B64327DA0B5600B7D919 /* MainVCCoordinator.swift */; };
 		A097B64627DA181B00B7D919 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097B64527DA181B00B7D919 /* FourthViewController.swift */; };
 		A097B64827DA18E900B7D919 /* FourthVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A097B64727DA18E900B7D919 /* FourthVCCoordinator.swift */; };
@@ -30,7 +33,6 @@
 		A09A138727C636140027C00C /* IOSPracticalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A138627C636140027C00C /* IOSPracticalsUITests.swift */; };
 		A09A138927C636140027C00C /* IOSPracticalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A138827C636140027C00C /* IOSPracticalsUITestsLaunchTests.swift */; };
 		A09A139C27C637330027C00C /* BasicAutoLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09A139B27C637330027C00C /* BasicAutoLayout.storyboard */; };
-		A09AAD2727CCA47400E462FB /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09AAD2627CCA47400E462FB /* Enumerations.swift */; };
 		A09AAD2927CCC44300E462FB /* UIComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09AAD2827CCC44300E462FB /* UIComponents.storyboard */; };
 		A09AAD2D27CCC4F900E462FB /* UISignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09AAD2C27CCC4F900E462FB /* UISignUpViewController.swift */; };
 		A09BF9202806842400F3A923 /* ArchitectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BF91F2806842400F3A923 /* ArchitectureViewController.swift */; };
@@ -104,6 +106,8 @@
 		A03E11A027F17EE300ACF751 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		A069F5A227C8FD7200CFD11D /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A06B66C827C8A968000CE5C7 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessViewController.swift; path = IOSPracticals/ViewControllers/BasicAutoLayout/SuccessViewController.swift; sourceTree = SOURCE_ROOT; };
+		A08FB1C428190CE300B31625 /* LabelTapGuestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTapGuestureRecognizer.swift; sourceTree = "<group>"; };
+		A08FB1C528190CE300B31625 /* RangeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeGestureRecognizer.swift; sourceTree = "<group>"; };
 		A097B64327DA0B5600B7D919 /* MainVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCCoordinator.swift; sourceTree = "<group>"; };
 		A097B64527DA181B00B7D919 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		A097B64727DA18E900B7D919 /* FourthVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthVCCoordinator.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 		A069F5A127C8FD4A00CFD11D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A08FB1C428190CE300B31625 /* LabelTapGuestureRecognizer.swift */,
+				A08FB1C528190CE300B31625 /* RangeGestureRecognizer.swift */,
 				A0C58EA327EC69EB0099B653 /* Storyboarded.swift */,
 				A069F5A227C8FD7200CFD11D /* Validation.swift */,
 				A0FB6C9527D7439500B98DA7 /* ViewControllerDefaults.swift */,
@@ -747,6 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08FB1C928193BEB00B31625 /* Enumerations.swift in Sources */,
 				A04C867F28003B4B00C42F24 /* ViewController.swift in Sources */,
 				A09BF9202806842400F3A923 /* ArchitectureViewController.swift in Sources */,
 				A0E5CB4F27D5CFAF00DE6059 /* WebViewController.swift in Sources */,
@@ -759,19 +766,19 @@
 				A0A629D3280065D400C11DAF /* MVCCoordinator.swift in Sources */,
 				A0A629CF2800593100C11DAF /* AppLoginViewController.swift in Sources */,
 				A03E11A127F17EE300ACF751 /* AddUserViewController.swift in Sources */,
+				A08FB1C628190CE300B31625 /* LabelTapGuestureRecognizer.swift in Sources */,
 				A0308F9327CC8A7B0091AA26 /* LoginViewController.swift in Sources */,
 				A09BF92B2806930900F3A923 /* MVPModel.swift in Sources */,
 				A0C58EAC27EC77CB0099B653 /* UsersListViewController.swift in Sources */,
 				A0F9F22D27D8A185000032F2 /* Coordinator.swift in Sources */,
 				A0B5285227C8E5A60019E417 /* SignUpViewController.swift in Sources */,
 				A0D4BE4527CDF87600732FE6 /* PageViewController.swift in Sources */,
-				A09AAD2727CCA47400E462FB /* Enumerations.swift in Sources */,
 				A0D4BE4727CDFBF700732FE6 /* UILoginViewController.swift in Sources */,
 				A097B64427DA0B5600B7D919 /* MainVCCoordinator.swift in Sources */,
-				A09AAD2727CCA47400E462FB /* Enumerations.swift in Sources */,
 				A09BF92D280695B900F3A923 /* MVPViewController.swift in Sources */,
 				A0D7981B27E8ADA90028958E /* Declarations.swift in Sources */,
 				A0EE19892807F3D0002059A7 /* BaseViewModel.swift in Sources */,
+				A08FB1C728190CE300B31625 /* RangeGestureRecognizer.swift in Sources */,
 				A03A4DA827F2FB1F00F9EBED /* APICall.swift in Sources */,
 				A0F9F23727D8A33E000032F2 /* SecondVCCoordinator.swift in Sources */,
 				A09C4FF427CF972600E28414 /* SegmentViewController.swift in Sources */,

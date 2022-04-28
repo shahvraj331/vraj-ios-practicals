@@ -84,13 +84,19 @@
                                 <rect key="frame" x="83" y="209.5" width="248" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="qOJ-3N-i92"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rV1-xx-891">
                                 <rect key="frame" x="83" y="263.5" width="248" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="oMG-Px-UcD"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXD-Wb-mGD">
                                 <rect key="frame" x="145" y="347.5" width="124" height="31"/>
@@ -100,19 +106,12 @@
                                     <action selector="loginValidateAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ir8-bJ-5vb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWL-9h-Vwm">
-                                <rect key="frame" x="178.5" y="113" width="57.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="yE7-2H-M8T" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.6" id="6NN-Hz-Vna"/>
                             <constraint firstItem="rV1-xx-891" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.6" id="DgL-1D-rfs"/>
-                            <constraint firstItem="FWL-9h-Vwm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="69" id="FiB-uM-2e9"/>
                             <constraint firstItem="uXD-Wb-mGD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.3" id="Mui-2c-sBn"/>
                             <constraint firstItem="rV1-xx-891" firstAttribute="top" secondItem="yE7-2H-M8T" secondAttribute="bottom" constant="20" id="NAT-hL-J8F"/>
                             <constraint firstItem="rV1-xx-891" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="RSF-LA-Jmr"/>
@@ -120,12 +119,11 @@
                             <constraint firstItem="uXD-Wb-mGD" firstAttribute="top" secondItem="rV1-xx-891" secondAttribute="bottom" constant="50" id="nAa-NK-xca"/>
                             <constraint firstItem="uXD-Wb-mGD" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="wSb-nV-7Bp"/>
                             <constraint firstItem="yE7-2H-M8T" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ypT-0m-inA"/>
-                            <constraint firstItem="FWL-9h-Vwm" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ztb-vT-NoC"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lblEmail" destination="yE7-2H-M8T" id="Rgi-Dw-FwS"/>
-                        <outlet property="lblPassword" destination="rV1-xx-891" id="Qqu-er-clU"/>
+                        <outlet property="txtEmail" destination="yE7-2H-M8T" id="Rgi-Dw-FwS"/>
+                        <outlet property="txtPassword" destination="rV1-xx-891" id="Qqu-er-clU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -60,6 +60,17 @@ class SecondViewController: UIViewController {
         if let message = messageFromFirst {
             lblMessageFromFirst.text = message
         }
+        self.dismissKeyboardOnTap(view)
     }
     
 }//End of class
+
+//MARK: - UITextFieldDelegate
+extension SecondViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}//End of extension
