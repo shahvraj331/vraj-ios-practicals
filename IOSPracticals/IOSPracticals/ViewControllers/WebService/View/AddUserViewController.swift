@@ -46,6 +46,7 @@ class AddUserViewController: UIViewController, Storyboarded {
     }
     
     fileprivate func initializeView() {
+        self.dismissKeyboardOnTap(view)
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         dialogView.layer.cornerRadius = 5.0
     }
@@ -58,6 +59,21 @@ class AddUserViewController: UIViewController, Storyboarded {
                 viewModel.addSingleUser(name: name, job: job)
             }
         }
+    }
+    
+}//End of class
+
+//MARK: - UITextFieldDelegate
+extension AddUserViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == tfNameOfUser {
+            textField.resignFirstResponder()
+            tfJobOfUser.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
     
 }//End of class
